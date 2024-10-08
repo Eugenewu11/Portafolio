@@ -3,6 +3,7 @@
 
 * {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     font-size: 14px;
@@ -10,17 +11,36 @@
 
 body{
     background:#4CAFED ;
-    margin: 0;
     text-align: center;
+    min-height: 100vh;
 }
 
 main{
     display: block;
 }
 
+/*----------------------------------------Inicio----------------------------------------*/
 .circle{
     border-radius: 50%;
+    height: 150px;
+    width: 150px;
+
 }
+
+/*----------------------------------------NavBar----------------------------------------*/
+.circleSmallLogo{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+}
+
+
+/*----------------------------------------Seccion Sobre Mi----------------------------------------*/
+.SobreMi{
+    background: #356BD4;
+}
+/*----------------------------------------Seccion Proyectos----------------------------------------*/
 
 .card-wrapper{
     max-width: 1100px;
@@ -45,7 +65,7 @@ main{
     transition: 0.2s ease;
 }
 
-.card-list .card-item .card-link{
+.card-list .card-item .card-link:active{
     cursor: grabbing;
 }
 
@@ -70,6 +90,12 @@ main{
     border-radius: 50px;
 }
 
+.card-list .card-link .card-title{
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+}
+
 /*Primer slide*/
 .card-list .card-link .badge.portafolio {
     color: #5372F0;
@@ -84,8 +110,8 @@ main{
 
 /*Tercer slide*/
 .card-list .card-link .badge.Proximo2 {
-    color: #d35706;
-    background: #ee7120;
+    color: #bf4d02;
+    background: #e17a37;
 }
 
 /*Cuarto slide*/
@@ -135,4 +161,9 @@ main{
     .card-wrapper .swiper-slide-button{
         display: none;
     }
+}
+
+/*----------------------------------------Seccion Skillset----------------------------------------*/
+.skillset{
+    background: #356BD4;
 }

@@ -15,7 +15,6 @@ new Swiper('.card-wrapper', {
       prevEl: '.swiper-button-prev',
     },
 
-
     breakpoints: {
         //Celulares
         0:{

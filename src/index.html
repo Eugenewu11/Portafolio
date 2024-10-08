@@ -15,6 +15,7 @@
 <meta property="og:type"content="website">
 <link rel="canonical" href="https://eugenewu/es">
 <link rel="stylesheet" href="style.css">
+
 <!--Link rel de Google icons-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 <!--Link rel de SwiperJS CSS-->
@@ -27,13 +28,14 @@
     <img class="circle" src="../assets/smallLogo.jpeg" alt="small logo">
     <img id="header-image" src="../assets/headerimg.jpeg" width="900px" height="600px" alt="Imagen programacion">
     <h1>Eugene Kelly Wu Leiva</h1>
+    
     <h2>Ingeniero en sistemas</h2>
 </header>
 <!--Barra de navegacion-->
 <nav id="navbar">
     <div>
         <a>
-            <img class="circle" src="../assets/smallLogo.jpeg" alt="small logo">
+            <img class="circleSmallLogo" src="../assets/smallLogo.jpeg" alt="small logo">
             <span>
                 Eugene Kelly Wu Leiva
                 <small>
@@ -62,7 +64,7 @@
 <main style="margin-top: 0px;">
     
     <!--Primera seccion, sobre mi-->
-     <section id="SobreMi">
+     <section id="SobreMi" class="SobreMi">
         <h3>Sobre Mí</h3>
         <hr>
         
@@ -76,7 +78,7 @@
      </section>
 
      <!--Segunda seccion, proyectos-->
-     <section>
+     <section id="proyectos--" class="proyectos">
         <div class="slidesContainer swiper">
             <div class="card-wrapper">
                 <ul class="card-list swiper-wrapper">
@@ -94,7 +96,7 @@
                     <li class="card-item swiper-slide">
                         <a href="#" class="card-link">
                             <img src="../assets/coming-soon.jpg" alt="Card Image 1" class="card-image">
-                            <p class="badge Proximo"> Proximo1</p>
+                            <p class="badge Proximo1"> Proximo1</p>
                             <h2 class="card-title">Proyecto Proximo 1</h2>
                             <button class="card-button
                             material-symbols-outlined">
@@ -105,7 +107,7 @@
                     <li class="card-item swiper-slide">
                         <a href="#" class="card-link">
                             <img src="../assets/coming-soon.jpg" alt="Card Image 1" class="card-image">
-                            <p class="badge Proximo"> Proximo2</p>
+                            <p class="badge Proximo2"> Proximo2</p>
                             <h2 class="card-title">Proyecto Proximo 2</h2>
                             <button class="card-button
                             material-symbols-outlined">
@@ -116,25 +118,31 @@
                     <li class="card-item swiper-slide">
                         <a href="#" class="card-link">
                             <img src="../assets/coming-soon.jpg" alt="Card Image 1" class="card-image">
-                            <p class="badge Proximo"> Proximo3</p>
+                            <p class="badge Proximo3"> Proximo3</p>
                             <h2 class="card-title">Proyecto Proximo 3</h2>
                             <button class="card-button
                             material-symbols-outlined">
                                 arrow_forward
                             </button>
                     </li>
-                    
                 </ul>
 
                 <div class="swiper-pagination"></div>
-                <div class="swiper-slide-button-prev"></div>
-                <div class="swiper-slide-button-next"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
             </div>
         </div>
         <!--SwiperJS script-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!--Custom script-->
         <script src="script.js"></script>
+    </section>
+    
+
+    <!--Skillset-->
+    <section id="skillSet" class="skillset">
+        <h3>Skillset</h3>
+    <hr>
     </section>
 </main>
 
