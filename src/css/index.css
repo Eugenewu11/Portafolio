@@ -1,0 +1,26 @@
+/*Main CSS para la aplicacion*/
+
+
+/*
+    --negroPrincipal: rgba(30, 30, 30, 1);
+    --blanco: rgba(#FFFFFF);
+    --naranja1: rgba(230, 71, 13, 1); Para Desarrollador. Gradiente 100%
+    --naranja2: rgba(223, 70, 14, 1); Para Wu. Gradiente 71%
+    --naranja3: rgba(230, 71, 13, 1); Para Leiva.
+    --fusia: rgba(204, 31, 126, 1); Para el gradiente de Wu.
+    --fusia2: rgba(204, 31, 126, 0.2); Para Wu. Paradas 80% y 90%
+    --fusia2: rgba(213, 27, 195, 0); Para Wu. Gradiente 56%
+*/
+
+#root{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-color: rgba(30, 30, 30, 1);
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit','Roboto';
+    min-height: auto;
+}

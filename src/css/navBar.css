@@ -1,0 +1,54 @@
+/*Lado Izquierdo*/
+.mainNav{
+    display: flex;
+    flex-wrap: nowrap; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;   
+    background-color: rgba(42, 40, 40, 1);
+    min-height: 8rem;
+}
+
+.nombre {
+    font-family: 'Outfit','Roboto';
+    font-weight: bold;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);  /*es una función CSS que define un valor mínimo, preferido y máximo para una propiedad. clamp(mínimo, preferido, máximo)*/
+    white-space: nowrap;  
+    flex-shrink: 0;       
+
+    /*Gradientes*/
+    background: linear-gradient(90deg, 
+        #ffffff 0ch, 
+        #ffffff 9ch,    
+        #DF460E 11ch,   
+        #b657ac 20ch    
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Lado derecho*/
+.buttons-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: clamp(1rem, 2vw, 2.5rem);
+    align-items: center;
+    flex-shrink: 0;  
+}
+
+/*Botones*/
+.inicioBtn, .proyectosBtn, .expBtn, .contactoBtn{
+    font-family: 'Outfit','Roboto';
+    background-color: transparent;
+    font-size: clamp(1.2rem, 1.2vw, 1.3rem); 
+    font-weight: 700;
+    color: white;
+    border: none;
+    padding: clamp(1rem, 1.5vw, 1.4rem);   
+    border-radius: 1.3rem;
+    cursor: pointer;
+    white-space: nowrap;/*controla cómo se manejan los espacios, saltos de línea y el ajuste de texto dentro de un elemento.*/
+}
