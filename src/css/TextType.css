@@ -1,0 +1,40 @@
+.text-type {
+    display: inline-block;
+    white-space: pre-wrap;
+
+    font-family: 'Outfit','Roboto';
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 3.5rem;
+    color: transparent;
+}
+
+.text-type__content {
+    background: linear-gradient(90deg, 
+        #FF6B35 0%,     
+        #FF4757 30%,    
+        #FF3838 60%,   
+        #FF6B9D 100%    
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+  
+  color: #FF6B35 !important;
+  font-weight: bold;
+  font-size: inherit;
+  background: none !important;
+
+  animation: cursor-blink 1s infinite;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
