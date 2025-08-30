@@ -5,12 +5,12 @@ import DarkVeil from './DarkveilBg.jsx';
 function Inicio() {
     return(
 
-            <div className="main-div">
+            <div id="Presentacion" className="main-div">
                 <div className="img-div">
                     <img className="meImg" src="/fotoLinked2.jpg"/>
                 </div>
 
-                <div id="Presentacion" className="carrera-div">
+                <div  className="carrera-div">
                     <TextType 
                         text={["Desarrollador Full-Stack"]}
                         typingSpeed={75}
@@ -42,5 +42,5 @@ function Inicio() {
 
 export default Inicio
 
-//logo loop, star border, pill nav, carousel
+//logo loop, carousel
 //backgropund dark veil

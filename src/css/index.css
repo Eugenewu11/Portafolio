@@ -11,22 +11,18 @@
     --fusia2: rgba(204, 31, 126, 0.2); Para Wu. Paradas 80% y 90%
     --fusia2: rgba(213, 27, 195, 0); Para Wu. Gradiente 56%
 */
-htrml{
-    scroll-behavior: smooth;
-}
 
-#root{
+#root {
     display: flex;
     flex-direction: column;
 }
 
-body{
-    background-color: rgba(30, 30, 30, 1);
+body {
+    /* Removido background-color para que se vea DarkVeil */
     margin: 0;
     margin-top: 8rem;
     padding: 0;
     font-family: 'Outfit','Roboto';
     min-height: auto;
-
     height: 1000rem;
 }
