@@ -21,7 +21,7 @@ function Inicio() {
                 </div>
 
                 <div className='texto-div'>
-                    Soy un Ingeniero en Sistemas en formación enfocado en el desarrollo Full-Stack,
+                    Soy un Ingeniero en Sistemas en formación, enfocado en el desarrollo Full-Stack,
                     apasionado por crear aplicaciones web completas que unan funcionalidad
                     y diseño. Mi objetivo es crecer profesionalmente construyendo soluciones
                     digitales <span className='resaltar'>innovadoras, robustas y escalables</span>, mientras perfecciono mis

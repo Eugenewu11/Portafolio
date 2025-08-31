@@ -2,6 +2,7 @@
 import NavBar from './components/NavBar.jsx'
 import Inicio from './components/Inicio.jsx'
 import DarkVeil from './components/DarkveilBg.jsx'
+import Tecnologias from './components/Tecnologias.jsx'
 import './css/App.css' 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <div className="content-wrapper">
             <NavBar/>
             <Inicio/>
+            <Tecnologias/>
         </div>
     </div>
    )

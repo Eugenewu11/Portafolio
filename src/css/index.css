@@ -26,3 +26,73 @@ body {
     min-height: auto;
     height: 1000rem;
 }
+
+/* MEDIA QUERIES */
+
+/* Tablets (769px - 1024px) */
+@media (max-width: 1024px) {
+    body {
+        margin-top: 7rem; /* Ajustar al navbar más pequeño */
+    }
+}
+
+/* Móviles grandes y tablets pequeñas (481px - 768px) */
+@media (max-width: 768px) {
+    body {
+        margin-top: 6rem; /* Ajustar al navbar responsive */
+        height: 800rem; /* Reducir altura total */
+    }
+    
+    #root {
+        width: 100%;
+        overflow-x: hidden; /* Evitar scroll horizontal */
+    }
+}
+
+/* Móviles pequeños (320px - 480px) */
+@media (max-width: 480px) {
+    body {
+        margin-top: 5rem;
+        height: 600rem;
+        font-size: 14px; /* Base font size más pequeña */
+    }
+}
+
+/* Móviles muy pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    body {
+        margin-top: 4.5rem;
+        height: 500rem;
+        font-size: 13px;
+    }
+}
+
+/* Ajustes generales para dispositivos móviles */
+@media (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    /* Evitar que elementos se salgan del viewport */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+}
+
+/* Pantallas muy anchas (1441px+) */
+@media (min-width: 1441px) {
+    body {
+        margin-top: 9rem; /* Más espacio para navbar más grande */
+        font-size: 16px;
+    }
+}
+
+/* Orientación landscape para móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        margin-top: 4rem; /* Menos espacio en landscape */
+        height: 400rem;
+    }
+}

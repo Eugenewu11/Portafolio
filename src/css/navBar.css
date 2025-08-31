@@ -65,3 +65,95 @@ a{
     cursor: pointer;
     white-space: nowrap;/*controla cómo se manejan los espacios, saltos de línea y el ajuste de texto dentro de un elemento.*/
 }
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .mainNav {
+        padding: 0 2rem;
+        min-height: 7rem;
+    }
+    
+    .left-section {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+    }
+    
+    .right-section {
+        gap: clamp(0.8rem, 1.2rem, 1.5rem);
+    }
+}
+
+/* Móviles grandes (481px - 768px) */
+@media (max-width: 768px) {
+    .mainNav {
+        padding: 0 1.5rem;
+        min-height: 6rem;
+        flex-wrap: wrap;
+    }
+    
+    .left-section {
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
+        white-space: normal;
+        text-align: center;
+        order: 1;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .right-section {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        gap: clamp(0.5rem, 2vw, 1.5rem);
+    }
+    
+    .inicioBtn, .proyectosBtn, .expBtn, .contactoBtn {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        padding: clamp(0.8rem, 1.2vw, 1rem);
+    }
+}
+
+/* Móviles pequeños (320px - 480px) */
+@media (max-width: 480px) {
+    .mainNav {
+        padding: 0 1rem;
+        min-height: 5rem;
+    }
+    
+    .left-section {
+        font-size: clamp(1.1rem, 6vw, 1.5rem);
+        margin-bottom: 0.5rem;
+    }
+    
+    .right-section {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .inicioBtn, .proyectosBtn, .expBtn, .contactoBtn {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+        border-radius: 1rem;
+    }
+}
+
+/* Móviles muy pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .mainNav {
+        padding: 0 0.5rem;
+        min-height: 4.5rem;
+    }
+    
+    .left-section {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    
+    .right-section {
+        gap: 0.3rem;
+    }
+    
+    .inicioBtn, .proyectosBtn, .expBtn, .contactoBtn {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+}

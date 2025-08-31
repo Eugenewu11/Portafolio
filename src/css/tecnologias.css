@@ -1,0 +1,159 @@
+.titulo-tec{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+
+    font-family: 'Outfit','Roboto';
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablets grandes y pantallas medianas (1025px - 1440px) */
+@media (max-width: 1440px) {
+    .titulo-tec {
+        margin: 2.5rem 2.5rem;
+        font-size: 1.9rem;
+    }
+}
+
+/* Tablets (769px - 1024px) */
+@media (max-width: 1024px) {
+    .titulo-tec {
+        margin: 2rem 2rem;
+        font-size: 1.8rem;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .main-container {
+        padding: 1.5rem 0;
+        height: 280px !important;
+    }
+    
+    .main-container .logoloop {
+        min-height: 70px;
+    }
+}
+
+/* Móviles grandes y tablets pequeñas (481px - 768px) */
+@media (max-width: 768px) {
+    .titulo-tec {
+        margin: 1.5rem 1.5rem;
+        font-size: 1.6rem;
+        justify-content: center;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+    .main-container {
+        padding: 1rem 0;
+        height: 250px !important;
+    }
+    
+    .main-container .logoloop {
+        min-height: 60px;
+    }
+    
+    /* Ajustar el LogoLoop para móviles */
+    .main-container .logoloop .logoloop__item {
+        margin-right: 2rem; /* Reducir gap entre logos */
+    }
+}
+
+/* Móviles pequeños (320px - 480px) */
+@media (max-width: 480px) {
+    .titulo-tec {
+        margin: 1rem 1rem;
+        font-size: 1.4rem;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .main-container {
+        padding: 0.8rem 0;
+        height: 220px !important;
+    }
+    
+    .main-container .logoloop {
+        min-height: 50px;
+    }
+    
+    .main-container .logoloop .logoloop__item {
+        margin-right: 1.5rem;
+    }
+    
+    /* Hacer los logos más pequeños en móviles */
+    .main-container .logoloop .logoloop__item img {
+        height: 40px !important; /* Reducir tamaño de logos */
+    }
+}
+
+/* Móviles muy pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .titulo-tec {
+        margin: 0.8rem 0.8rem;
+        font-size: 1.2rem;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .main-container {
+        padding: 0.5rem 0;
+        height: 200px !important;
+    }
+    
+    .main-container .logoloop {
+        min-height: 45px;
+    }
+    
+    .main-container .logoloop .logoloop__item {
+        margin-right: 1rem;
+    }
+    
+    .main-container .logoloop .logoloop__item img {
+        height: 35px !important;
+    }
+}
+
+/* Pantallas muy anchas (1441px+) */
+@media (min-width: 1441px) {
+    .titulo-tec {
+        margin: 3.5rem 3.5rem;
+        font-size: 2.2rem;
+    }
+    
+    .main-container {
+        padding: 2.5rem 0;
+        height: 320px !important;
+    }
+    
+    .main-container .logoloop {
+        min-height: 90px;
+    }
+}
+
+/* Orientación landscape para móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .titulo-tec {
+        margin: 1rem 1.5rem;
+        font-size: 1.4rem;
+    }
+    
+    .main-container {
+        height: 180px !important;
+        padding: 0.5rem 0;
+    }
+    
+    .main-container .logoloop {
+        min-height: 40px;
+    }
+    
+    .main-container .logoloop .logoloop__item img {
+        height: 35px !important;
+    }
+}

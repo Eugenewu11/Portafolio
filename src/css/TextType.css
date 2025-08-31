@@ -38,3 +38,51 @@
 .text-type__cursor--hidden {
   display: none;
 }
+
+/*Media Queries*/
+@media (max-width: 1440px) {
+    .text-type {
+        font-size: 2.8rem;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .text-type {
+        font-size: 2.5rem;
+        margin-top: 2.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-type {
+        font-size: 2rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-type {
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 320px) {
+    .text-type {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+}
+
+/* Orientación landscape para móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .text-type {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+}
