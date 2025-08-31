@@ -248,8 +248,8 @@
 .mobile-menu-popover {
   position: absolute;
     top: calc(100% + 0.5rem); 
-    left: 1rem;
-    right: 1rem;
+    right: 0;
+    width: 10rem;
     background: rgba(42, 40, 40, 0.95); 
     backdrop-filter: blur(10px); 
     border-radius: 27px;
@@ -260,6 +260,12 @@
     transform-origin: top center;
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-popover.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
 }
 
 .mobile-menu-list {

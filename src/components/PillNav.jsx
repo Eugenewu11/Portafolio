@@ -1,3 +1,4 @@
+// PillNav.jsx
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import "../css/PillNav.css";
@@ -217,6 +218,36 @@ const PillNav = ({
     onMobileMenuClick?.();
   };
 
+  // Función para cerrar el menú móvil al hacer clic en un enlace
+  const closeMobileMenu = () => {
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+      
+      const hamburger = hamburgerRef.current;
+      const menu = mobileMenuRef.current;
+
+      if (hamburger) {
+        const lines = hamburger.querySelectorAll(".hamburger-line");
+        gsap.to(lines[0], { rotation: 0, y: 0, duration: 0.3, ease });
+        gsap.to(lines[1], { rotation: 0, y: 0, duration: 0.3, ease });
+      }
+
+      if (menu) {
+        gsap.to(menu, {
+          opacity: 0,
+          y: 10,
+          scaleY: 1,
+          duration: 0.2,
+          ease,
+          transformOrigin: "top center",
+          onComplete: () => {
+            gsap.set(menu, { visibility: "hidden" });
+          },
+        });
+      }
+    }
+  };
+
   const cssVars = {
     ["--base"]: baseColor,
     ["--pill-bg"]: pillColor,
@@ -240,6 +271,7 @@ const PillNav = ({
             ref={(el) => {
               logoRef.current = el;
             }}
+            onClick={closeMobileMenu} // Cerrar menú al hacer clic en el logo
           >
             <img src={logo} alt={logoAlt} ref={logoImgRef} />
           </a>
@@ -256,6 +288,7 @@ const PillNav = ({
                   aria-label={item.ariaLabel || item.label}
                   onMouseEnter={() => handleEnter(i)}
                   onMouseLeave={() => handleLeave(i)}
+                  onClick={closeMobileMenu} // Cerrar menú al hacer clic en enlace
                 >
                   <span
                     className="hover-circle"
@@ -298,7 +331,7 @@ const PillNav = ({
               <a
                 href={item.href}
                 className={`mobile-menu-link${activeHref === item.href ? " is-active" : ""}`}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={closeMobileMenu} // Cerrar menú al hacer clic en enlace móvil
               >
                 {item.label}
               </a>

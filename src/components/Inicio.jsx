@@ -1,8 +1,20 @@
 import '../css/Inicio.css'
 import TextType from './TextType.jsx' //Componente de reacbits.dev
-import DarkVeil from './DarkveilBg.jsx';
+
 
 function Inicio() {
+
+     // Función para manejar la descarga del CV
+    const handleDownloadCV = () => {
+       
+        const link = document.createElement('a');
+        link.href = '/Documents/Eugene_Kelly_Wu_Leiva_CV.pdf'; // Ruta a tu archivo PDF
+        link.download = 'Eugene_Kelly_Wu_Leiva_CV.pdf'; // Nombre del archivo al descargar
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return(
 
             <div id="Presentacion" className="main-div">
@@ -41,6 +53,3 @@ function Inicio() {
 }
 
 export default Inicio
-
-//logo loop, carousel
-//backgropund dark veil

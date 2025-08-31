@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 4rem 0;
 
     font-family: 'Outfit','Roboto';
     font-size: 2rem;
@@ -61,7 +61,7 @@
     
     /* Ajustar el LogoLoop para móviles */
     .main-container .logoloop .logoloop__item {
-        margin-right: 2rem; /* Reducir gap entre logos */
+        margin-right: 2rem; 
     }
 }
 
