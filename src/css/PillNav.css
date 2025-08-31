@@ -1,5 +1,5 @@
 .pill-nav-container {
-  position: static; /* Changed from absolute to static */
+  position: static; 
   z-index: 99;
 }
 
@@ -69,7 +69,7 @@
   display: flex;
   align-items: center;
   height: var(--nav-h);
-  background: transparent; /* Removed white background */
+  background: transparent; 
   border-radius: 9999px;
 }
 
@@ -98,7 +98,7 @@
   align-items: stretch;
   gap: var(--pill-gap);
   margin: 0;
-  padding: 0; /* Removed padding that was creating background */
+  padding: 0; 
   height: 100%;
 }
 
@@ -113,8 +113,8 @@
   justify-content: center;
   height: 100%;
   padding: 0 var(--pill-pad-x);
-  background: transparent; /* Made pills transparent by default */
-  color: var(--pill-text, #ffffff); /* Default white text */
+  background: transparent;
+  color: var(--pill-text, #ffffff);
   text-decoration: none;
   border-radius: 9999px;
   box-sizing: border-box;
@@ -127,12 +127,12 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease; /* Smooth transition */
+  transition: all 0.3s ease; 
 }
 
 .pill:hover {
-  background: var(--pill-bg, #ffffff); /* White background on hover */
-  color: var(--hover-text, #000000); /* Black text on hover */
+  background: var(--pill-bg, #ffffff); 
+  color: var(--hover-text, #000000); 
 }
 
 .pill .hover-circle {
@@ -173,8 +173,8 @@
 }
 
 .pill.is-active {
-  background: var(--pill-bg, #ffffff); /* White background for active pill */
-  color: var(--base, #000000); /* Black text for active pill */
+  background: var(--pill-bg, #ffffff); 
+  color: var(--base, #000000); 
 }
 
 .pill.is-active::after {

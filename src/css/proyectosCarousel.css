@@ -291,214 +291,128 @@
   }
   
   .project-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .projects-section {
-    padding: 2.5rem 1rem;
-    min-height: auto;
-  }
-  
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-  }
-  
-  .carousel {
-    margin-bottom: 2.5rem;
-    border-radius: 10px;
-  }
-  
-  .project-card {
-    flex-direction: column;
-    max-width: 100%;
-    height: 500px;
-  }
-  
-  .project-image {
-    height: 240px;
-  }
-  
-  .project-content {
-    padding: 1.2rem;
-  }
-  
-  .project-title {
-    font-size: 1.3rem;
-  }
-  
-  .project-description {
-    font-size: 0.95rem;
+
+  .carousel-controls {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 1rem 0 !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    pointer-events: auto !important;
   }
   
   .control-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 1.2rem;
+    position: relative !important;
+    background: rgba(79, 70, 229, 0.9) !important;
+    color: white !important;
+    width: 50px !important;
+    height: 50px !important;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3) !important;
+  }
+
+  .carousel-indicators {
+    margin-top: 0.5rem !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  .indicator {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+  }
+  
+  .indicator.active {
+    transform: scale(1.2) !important;
+  }
+
+  .project-content {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 1.5rem !important;
+  }
+  
+  .project-button {
+    align-self: center !important;
+    margin-top: 1rem !important;
+    width: 100% !important;
+    max-width: 200px !important;
+  }
+  
+
+  .project-description {
+    min-height: 80px !important;
+  }
+
+  .project-card {
+    height: auto !important;
+    min-height: 500px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .projects-section {
-    padding: 2rem 0.5rem;
-  }
-  
-  .section-title {
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-  }
-  
-  .carousel-slide {
-    padding: 0.8rem;
-  }
-  
-  .project-card {
-    height: 480px;
-  }
-  
-  .project-image {
-    height: 200px;
-  }
-  
-  .project-content {
-    padding: 1rem;
-  }
-  
-  .project-title {
-    font-size: 1.2rem;
-  }
-  
-  .project-description {
-    font-size: 0.9rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .project-button {
-    padding: 0.7rem 1.4rem;
-    font-size: 0.95rem;
-  }
-  
   .carousel-controls {
-    padding: 0 0.5rem;
+    gap: 1.5rem !important;
+    margin-top: 0.8rem !important;
   }
   
   .control-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
+    width: 45px !important;
+    height: 45px !important;
   }
   
-  .carousel-indicators {
-    padding: 1rem;
-  }
-  
-  .indicator {
-    width: 9px;
-    height: 9px;
-  }
-  
-  .image-placeholder {
-    padding: 1rem;
-  }
-  
-  .image-placeholder-icon {
-    font-size: 2rem;
-  }
-  
-  .image-placeholder-text {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .section-title {
-    font-size: 1.7rem;
-  }
-  
-  .project-card {
-    height: 460px;
-  }
-  
-  .project-image {
-    height: 180px;
+  .project-button {
+    max-width: 180px !important;
+    padding: 0.8rem 1.5rem !important;
   }
   
   .project-status {
-    font-size: 0.7rem;
-    padding: 4px 10px;
+    top: 10px !important;
+    right: 10px !important;
+    font-size: 0.9rem !important;
+    padding: 5px 12px !important;
+  }
+
+  .indicator {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
   }
 }
 
-@media (max-height: 500px) and (orientation: landscape) {
-  .projects-section {
-    padding: 2rem 1rem;
-    min-height: auto;
-  }
-  
+/* Estilos para landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 768px) {
   .project-card {
-    flex-direction: row;
-    height: 220px;
+    flex-direction: row !important;
+    height: 200px !important;
+    min-height: auto !important;
   }
   
   .project-image {
-    width: 40%;
-    height: 100%;
+    width: 35% !important;
+    height: 100% !important;
   }
   
   .project-content {
-    width: 60%;
-    padding: 1rem;
+    width: 65% !important;
+    padding: 1rem !important;
   }
   
-  .project-title {
-    font-size: 1.1rem;
+  .project-button {
+    margin-top: 0.5rem !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    max-width: 150px !important;
   }
   
-  .project-description {
-    font-size: 0.85rem;
-  }
-}
-
-@media (min-width: 1600px) {
-  .container {
-    max-width: 1200px;
-  }
-  
-  .project-card {
-    max-width: 900px;
-    height: 600px;
-  }
-  
-  .project-image {
-    height: 340px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .carousel-container {
-    transition: none;
-  }
-  
-  .project-card,
-  .project-card:hover,
-  .project-image img,
-  .project-card:hover .project-image img,
-  .control-btn,
-  .control-btn:hover,
-  .indicator,
-  .project-button,
-  .project-button:hover {
-    transition: none;
-  }
-  
-  .project-card:hover,
-  .project-button:hover {
-    transform: none;
-  }
-  
-  .project-card:hover .project-image img {
-    transform: none;
+  .carousel-controls {
+    margin-top: 0.5rem !important;
   }
 }
