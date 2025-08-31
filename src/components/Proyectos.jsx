@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../css/proyectosCarousel.css';
 
 const ProyectosCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -37,10 +40,22 @@ const ProyectosCarousel = () => {
       description: "Espera mi próximo proyecto!",
       status: "PRÓXIMAMENTE", 
       image: null,
-      githubUrl: "hhttps://github.com/Eugenewu11",
+      githubUrl: "https://github.com/Eugenewu11",
       imageType: null
     }
   ]);
+
+  // Detectar si es móvil
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
@@ -62,6 +77,36 @@ const ProyectosCarousel = () => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
+  // Funciones para manejar gestos táctiles
+  const handleTouchStart = (e) => {
+    if (!isMobile) return;
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isMobile) return;
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!isMobile || !touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    }
+    if (isRightSwipe) {
+      prevSlide();
+    }
+    
+    // Reset valores
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
@@ -75,7 +120,12 @@ const ProyectosCarousel = () => {
       <div className="container">
         <h2 className="section-title">Proyectos</h2>
         
-        <div className="carousel">
+        <div 
+          className="carousel"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <div className="carousel-container">
             {projects.map((project, index) => (
               <div 
@@ -104,26 +154,48 @@ const ProyectosCarousel = () => {
                   <div className="project-content">
                     <h3 className="project-title">{project.title}</h3>
                     <p className="project-description">{project.description}</p>
-                    <button 
-                      className="project-button" 
-                      onClick={() => openGithub(project.githubUrl)}
-                    >
-                      Ver Detalles
-                    </button>
+                    
+                    {/* Botones en móvil - Una sola fila */}
+                    {isMobile ? (
+                      <div className="mobile-controls-row">
+                        <button className="mobile-control-btn prev" onClick={prevSlide}>
+                          &#8249;
+                        </button>
+                        <button 
+                          className="project-button mobile-details-btn" 
+                          onClick={() => openGithub(project.githubUrl)}
+                        >
+                          Ver Detalles
+                        </button>
+                        <button className="mobile-control-btn next" onClick={nextSlide}>
+                          &#8250;
+                        </button>
+                      </div>
+                    ) : (
+                      <button 
+                        className="project-button" 
+                        onClick={() => openGithub(project.githubUrl)}
+                      >
+                        Ver Detalles
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="carousel-controls">
-            <button className="control-btn prev" onClick={prevSlide}>
-              &#8249;
-            </button>
-            <button className="control-btn next" onClick={nextSlide}>
-              &#8250;
-            </button>
-          </div>
+          {/* Controles solo para desktop */}
+          {!isMobile && (
+            <div className="carousel-controls">
+              <button className="control-btn prev" onClick={prevSlide}>
+                &#8249;
+              </button>
+              <button className="control-btn next" onClick={nextSlide}>
+                &#8250;
+              </button>
+            </div>
+          )}
           
           <div className="carousel-indicators">
             {projects.map((_, index) => (
@@ -136,6 +208,12 @@ const ProyectosCarousel = () => {
           </div>
         </div>
         
+        {/* Indicador de swipe para móvil */}
+        {isMobile && (
+          <div className="swipe-indicator">
+            <span>Desliza para ver más proyectos ← →</span>
+          </div>
+        )}
       </div>
     </section>
   );

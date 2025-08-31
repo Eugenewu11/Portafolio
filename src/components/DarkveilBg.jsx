@@ -84,16 +84,27 @@ export default function DarkVeil({
   resolutionScale = 1,
 }) {
   const ref = useRef(null);
+  
   useEffect(() => {
     const canvas = ref.current;
     const parent = canvas.parentElement;
 
+    // Establecer fondo transparente inmediatamente
+    canvas.style.backgroundColor = 'transparent';
+
     const renderer = new Renderer({
       dpr: Math.min(window.devicePixelRatio, 2),
       canvas,
+      alpha: true, // Habilita transparencia
+      premultipliedAlpha: false,
+      preserveDrawingBuffer: false
     });
 
     const gl = renderer.gl;
+    
+    // Limpiar con color transparente
+    gl.clearColor(0.0, 0.0, 0.0, 0.0);
+    
     const geometry = new Triangle(gl);
 
     const program = new Program(gl, {
@@ -113,19 +124,27 @@ export default function DarkVeil({
     const mesh = new Mesh(gl, { geometry, program });
 
     const resize = () => {
-      const w = parent.clientWidth,
-        h = parent.clientHeight;
+      const w = Math.max(parent.clientWidth, window.innerWidth);
+      const h = Math.max(parent.clientHeight, window.innerHeight);
       renderer.setSize(w * resolutionScale, h * resolutionScale);
       program.uniforms.uResolution.value.set(w, h);
     };
 
-    window.addEventListener("resize", resize);
+    const handleResize = () => {
+      setTimeout(resize, 100); 
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
     resize();
 
     const start = performance.now();
     let frame = 0;
 
     const loop = () => {
+      // Limpiar con transparencia
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      
       program.uniforms.uTime.value =
         ((performance.now() - start) / 1000) * speed;
       program.uniforms.uHueShift.value = hueShift;
@@ -133,6 +152,7 @@ export default function DarkVeil({
       program.uniforms.uScan.value = scanlineIntensity;
       program.uniforms.uScanFreq.value = scanlineFrequency;
       program.uniforms.uWarp.value = warpAmount;
+      
       renderer.render({ scene: mesh });
       frame = requestAnimationFrame(loop);
     };
@@ -141,7 +161,8 @@ export default function DarkVeil({
 
     return () => {
       cancelAnimationFrame(frame);
-      window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
     };
   }, [
     hueShift,
@@ -152,10 +173,12 @@ export default function DarkVeil({
     warpAmount,
     resolutionScale,
   ]);
+  
   return (
     <canvas
       ref={ref}
       className="darkveil-canvas"
+      style={{ backgroundColor: 'transparent' }}
     />
   );
 }

@@ -27,8 +27,8 @@ function Tecnologias() {
             logos={techLogos}
             speed={90}
             direction="left"
-            logoHeight={64}  
-            gap={50}         
+            logoHeight={90}  
+            gap={60}         
             pauseOnHover
             scaleOnHover
             fadeOut={false}  
