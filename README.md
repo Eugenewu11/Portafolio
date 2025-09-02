@@ -37,7 +37,7 @@ El proyecto incluye **animaciones fluidas con GSAP** y **gráficos 3D con OGL** 
 
 ## 🛠️ Tecnologías Utilizadas  
 - **Frontend:** React 18, JavaScript ES6+, CSS3  
-- **Animaciones:** GSAP 3.x, Framer Motion, Lottie  
+- **Animaciones:** GSAP  
 - **3D Graphics:** OGL, WebGL  
 - **Build Tool:** Vite  
 - **Linting:** ESLint  
