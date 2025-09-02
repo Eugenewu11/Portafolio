@@ -3,8 +3,6 @@
 <div align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
-  <img src="https://img.shields.io/badge/WebGL-990000?style=for-the-badge&logo=webgl&logoColor=white" alt="WebGL" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
 </div>
@@ -14,9 +12,8 @@
 <div align="center">
   <h3>✨ Desarrollador Full-Stack en formación</h3>
   <p>Un portafolio moderno y animado que combina creatividad con funcionalidad</p>
-  <a href="https://eugenewu11.github.io/Portafolio" target="_blank">🌐 Ver Demo en Vivo</a> |
+  <a href="https://portafolioeugenewu.netlify.app/" target="_blank">🌐 Ver Demo en Vivo</a> |
   <a href="#-instalación">📦 Instalación</a> |
-  <a href="#-contacto">📧 Contacto</a>
 </div>
 
 ---
@@ -73,31 +70,33 @@ npm run dev
 http://localhost:5173/
 ```
 ## 📁 Estructura del Proyecto
+```
 Portafolio/
-├── public/
-│   ├── fotoLinked2.jpg
-│   └── favicon.ico
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── EugeneKellyWuLeiva.pdf
-│   ├── components/
-│   │   ├── Inicio.jsx
-│   │   ├── TextType.jsx
-│   │   └── ...
-│   ├── css/
-│   │   ├── Inicio.css
-│   │   └── ...
-│   ├── scripts/
-│   │   ├── mobileHideHamburguer.js
-├── App.jsx
-├── main.jsx
-├── index.html
-├── .gitignore
-├── package.json
-└── README.md
+    ├── public/
+    │   ├── fotoLinked2.jpg
+    │   └── favicon.ico
+    │   └── ...
+    ├── src/
+    │   ├── components/
+    │   │   ├── EugeneKellyWuLeiva.pdf
+    │   ├── components/
+    │   │   ├── Inicio.jsx
+    │   │   ├── TextType.jsx
+    │   │   └── ...
+    │   ├── css/
+    │   │   ├── Inicio.css
+    │   │   └── ...
+    │   ├── scripts/
+    │   │   ├── mobileHideHamburguer.js
+    ├── App.jsx
+    ├── main.jsx
+    ├── index.html
+    ├── .gitignore
+    ├── package.json
+    └── README.md
+```
 
-##🎯 Funcionalidades
+## 🎯 Funcionalidades
 🏠 Página Principal
 
 Presentación personal con texto animado
@@ -126,7 +125,7 @@ Botones de contacto y descarga de CV
 
 ## 🚀 Despliegue
 
-# Netlify
+Netlify
 
 - https://portafolioeugenewu.netlify.app/
 
