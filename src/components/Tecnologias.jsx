@@ -25,7 +25,7 @@ function Tecnologias() {
 
         <LogoLoop
             logos={techLogos}
-            speed={90}
+            speed={80}
             direction="left"
             logoHeight={90}  
             gap={60}         

@@ -4,6 +4,7 @@ import Inicio from './components/Inicio.jsx'
 import DarkVeil from './components/DarkveilBg.jsx'
 import Tecnologias from './components/Tecnologias.jsx'
 import ProyectosCarousel from './components/Proyectos.jsx'
+import Contactme from './components/Contactme.jsx'
 import './css/App.css' 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Inicio/>
             <Tecnologias/>
             <ProyectosCarousel/>
+            <Contactme/>
         </div>
     </div>
    )

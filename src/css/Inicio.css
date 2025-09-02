@@ -9,7 +9,7 @@
 
 .img-div{
     display: flex;
-    margin-top: 11rem;
+    margin-top: 8rem;
 }
 
 .texto-div {
@@ -110,7 +110,7 @@
     
     .texto-div {
         margin: 3rem 4rem;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         text-align: center;
         line-height: 1.4;
     }

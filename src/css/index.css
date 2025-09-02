@@ -11,7 +11,6 @@ body {
     padding: 0;
     font-family: 'Outfit','Roboto';
     min-height: auto;
-    height: 1000rem;
 }
 
 /* MEDIA QUERIES */
@@ -27,7 +26,6 @@ body {
 @media (max-width: 768px) {
     body {
         margin-top: 6rem; 
-        height: 800rem; 
     }
     
     #root {
@@ -40,7 +38,6 @@ body {
 @media (max-width: 480px) {
     body {
         margin-top: 5rem;
-        height: 600rem;
         font-size: 14px; 
     }
 }
@@ -49,7 +46,6 @@ body {
 @media (max-width: 320px) {
     body {
         margin-top: 4.5rem;
-        height: 500rem;
         font-size: 13px;
     }
 }
@@ -80,6 +76,5 @@ body {
 @media (max-width: 768px) and (orientation: landscape) {
     body {
         margin-top: 4rem; 
-        height: 400rem;
     }
 }

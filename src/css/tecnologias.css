@@ -32,7 +32,7 @@
     
     .main-container {
         padding: 1.5rem 0;
-        height: 280px !important;
+        height: 280px ;
     }
     
     .main-container .logoloop {
@@ -52,7 +52,7 @@
     
     .main-container {
         padding: 1rem 0;
-        height: 250px !important;
+        height: 250px ;
     }
     
     .main-container .logoloop {
@@ -76,7 +76,7 @@
     
     .main-container {
         padding: 0.8rem 0;
-        height: 220px !important;
+        height: 220px ;
     }
     
     .main-container .logoloop {
@@ -89,7 +89,7 @@
     
     /* Hacer los logos más pequeños en móviles */
     .main-container .logoloop .logoloop__item img {
-        height: 40px !important; /* Reducir tamaño de logos */
+        height: 40px ; /* Reducir tamaño de logos */
     }
 }
 
@@ -104,7 +104,7 @@
     
     .main-container {
         padding: 0.5rem 0;
-        height: 200px !important;
+        height: 200px ;
     }
     
     .main-container .logoloop {
@@ -116,7 +116,7 @@
     }
     
     .main-container .logoloop .logoloop__item img {
-        height: 35px !important;
+        height: 35px ;
     }
 }
 
@@ -129,7 +129,7 @@
     
     .main-container {
         padding: 2.5rem 0;
-        height: 320px !important;
+        height: 320px ;
     }
     
     .main-container .logoloop {
@@ -145,7 +145,7 @@
     }
     
     .main-container {
-        height: 180px !important;
+        height: 180px ;
         padding: 0.5rem 0;
     }
     
@@ -154,6 +154,6 @@
     }
     
     .main-container .logoloop .logoloop__item img {
-        height: 35px !important;
+        height: 35px ;
     }
 }

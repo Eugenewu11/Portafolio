@@ -10,7 +10,7 @@ const ProyectosCarousel = () => {
     {
       id: 1,
       title: "Agenda de Contactos",
-      description: "Desarrollo fullstack con HTML5, CSS, JavaScript, Node.js y SQL Server, enfocado en la implementación de APIs RESTful",
+      description: "Desarrollo fullstack con HTML5, CSS, Node.js y SQL Server, enfocado en la implementación de APIs RESTful",
       status: "COMPLETADO",
       image: "../agendaContactos.png",
       githubUrl: "https://github.com/Eugenewu11/Agenda_De_Contactos.git",
@@ -20,7 +20,7 @@ const ProyectosCarousel = () => {
       id: 2,
       title: "Portafolio",
       description: "Desarrollo Frontend utilizando tecnologías: HTML5, CSS, JavaScript y React",
-      status: "EN DESARROLLO",
+      status: "COMPLETADO",
       image: "../portafolio.png", 
       githubUrl: "https://github.com/Eugenewu11/Portafolio.git",
       imageType: "portfolio" 
