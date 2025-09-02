@@ -13,6 +13,13 @@ function Inicio() {
         document.body.removeChild(link);
     };
 
+    const handleContactClick = () => {
+        const contactElement = document.getElementById('Contacto');
+        if (contactElement) {
+            contactElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return(
         <div id="Presentacion" className="main-div">
             <div className="img-div">
@@ -38,8 +45,8 @@ function Inicio() {
             </div>
 
             <div className='buttons-div'>
-                <button className='contactoInicioBtn'>
-                    <a href='#Contacto' className='aContacto'>Contactame</a>
+                <button className='contactoInicioBtn' onClick={handleContactClick}>
+                    Contactame
                 </button>
                 <button className='descargarcvBtn' onClick={handleDownloadCV}>
                     Descargar CV
