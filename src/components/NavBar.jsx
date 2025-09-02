@@ -17,7 +17,6 @@ function NavBar() {
                         items={[
                             { label: 'Inicio', href: '#Presentacion' },
                             { label: 'Proyectos', href: '#Proyectos' },
-                            { label: 'Experiencia', href: '#Experiencia' },
                             { label: 'Contacto', href: '#Contacto' }
                         ]}
                         activeHref="#Inicio"

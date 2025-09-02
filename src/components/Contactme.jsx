@@ -2,8 +2,8 @@ import '../css/contactme.css'
 
 function Contactme() {
     return(
-        <footer>
-            <div className='contact-container'>
+        <footer >
+            <div id='Contacto' className='contact-container'>
 
                 <div className='title'>
                     Contacto
