@@ -27,22 +27,22 @@ const ProyectosCarousel = () => {
     },
     {
       id: 3,
-      title: "Proyecto 3",
-      description: "Espera mi próximo proyecto!",
-      status: "PRÓXIMAMENTE",
-      image: null,
-      githubUrl: "https://github.com/Eugenewu11",
-      imageType: null
+      title: "Calculadora",
+      description: "Calculadora hecha con HTML5, CSS y JavaScript. Enfocado a aprender más sobre manipulación del DOM y practicar CSS",
+      status: "COMPLETADO",
+      image: '../calculadora.png',
+      githubUrl: "https://github.com/EugeneWu1/Calculadora.git",
+      imageType: "portfolio"
     },
     {
       id: 4,
-      title: "Proyecto 4",
-      description: "Espera mi próximo proyecto!",
-      status: "PRÓXIMAMENTE", 
-      image: null,
-      githubUrl: "https://github.com/Eugenewu11",
-      imageType: null
-    }
+      title: "To DO List",
+      description: "Lista de tareas por hacer hecha con React y Tailwind",
+      status: "COMPLETADA", 
+      image: "../todolist.png",
+      githubUrl: "https://github.com/Eugenewu11/ToDoList.git",
+      imageType: "portfolio"
+    },
   ]);
 
   // Detectar si es móvil
