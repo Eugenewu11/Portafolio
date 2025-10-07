@@ -43,6 +43,15 @@ const ProyectosCarousel = () => {
       githubUrl: "https://github.com/Eugenewu11/ToDoList.git",
       imageType: "portfolio"
     },
+    {
+      id: 5,
+      title: "Pokepedia",
+      description: "Una página web que consume la PokéAPI para mostrar información sobre los Pokémon. Hecho con React y Tailwind",
+      status: "EN DESARROLLO", 
+      image: "../pokepedia.png",
+      githubUrl: "https://github.com/Eugenewu11/Pokepedia.git",
+      imageType: "portfolio"
+    },
   ]);
 
   // Detectar si es móvil
