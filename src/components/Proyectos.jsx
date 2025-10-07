@@ -43,8 +43,16 @@ const ProyectosCarousel = () => {
       githubUrl: "https://github.com/Eugenewu11/ToDoList.git",
       imageType: "portfolio"
     },
+    {id: 5,
+      title: "Clinica EWEMES",
+      description: "Una aplicación web para dar a conocer los servicios de la clínica. Hecho para fines didacticos de manera grupal con React y Tailwind",
+      status: "EN DESARROLLO", 
+      image: "../clinica.png",
+      githubUrl: "https://github.com/Eugenewu11/Frontend_CitasMedicas.git",
+      imageType: "portfolio"
+    },
     {
-      id: 5,
+      id: 6,
       title: "Pokepedia",
       description: "Una página web que consume la PokéAPI para mostrar información sobre los Pokémon. Hecho con React y Tailwind",
       status: "EN DESARROLLO", 
